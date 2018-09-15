@@ -27,7 +27,7 @@
 
     <StackPane alignment="CENTER">
         <Rectangle fill="TRANSPARENT" stroke="gray" width="230" height="50" />
-            <Text fx:id="output" />
+            <Text fx:id="output" font="$FONT" />
     </StackPane>
 
     <HBox spacing="10" alignment="CENTER">
