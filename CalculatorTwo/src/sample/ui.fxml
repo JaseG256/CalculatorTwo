@@ -53,8 +53,8 @@
 
     <HBox spacing="10" alignment="CENTER">
         <Button text="0" prefWidth="110" font="$FONT" onAction="#processNumPad" />
-        <Button text="=" prefWidth="50" font="$FONT" onAction="#processNumPad" />
-        <Button text="+" prefWidth="50" font="$FONT" onAction="#processNumPad" />
+        <Button text="=" prefWidth="50" font="$FONT" onAction="#processOperator" />
+        <Button text="+" prefWidth="50" font="$FONT" onAction="#processOperator" />
     </HBox>
 
 

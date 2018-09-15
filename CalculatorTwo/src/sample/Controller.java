@@ -13,10 +13,19 @@ public class Controller {
     private Text output;
 
     // Should be converted to Enum defining operator symbols i.e. (+,-,*,/ etc)
-    private String operator;
+    private String operator = "";
+    private double number1 = 0;
+    private boolean start = true;
+
+    private Model model = new Model();
 
     @FXML
     private void processNumPad(ActionEvent event) {
+        if (start) {
+            output.setText("");
+            start = false;
+        }
+
         String value = ((Button)event.getSource()).getText();
         output.setText(output.getText() + value);
     }
@@ -26,7 +35,21 @@ public class Controller {
         String value = ((Button)event.getSource()).getText();
 
         if (!"=".equals(value)) {
+            if (!operator.equals(""))
+                return;
 
+            operator = value;
+            number1 = Double.parseDouble(output.getText());
+            output.setText("");
+        } else {
+            // calculation
+            if (operator.isEmpty())
+                return;
+
+            output.setText(String.valueOf
+                    (model.calculate(number1, Double.parseDouble(output.getText()), operator)));
+            operator = "";
+            start = true;
         }
     }
 }

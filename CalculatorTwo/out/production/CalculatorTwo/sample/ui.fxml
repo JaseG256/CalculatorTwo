@@ -27,7 +27,7 @@
 
     <StackPane alignment="CENTER">
         <Rectangle fill="TRANSPARENT" stroke="gray" width="230" height="50" />
-            <Text fx:id="output" />
+            <Text fx:id="output" font="$FONT" />
     </StackPane>
 
     <HBox spacing="10" alignment="CENTER">
@@ -53,8 +53,8 @@
 
     <HBox spacing="10" alignment="CENTER">
         <Button text="0" prefWidth="110" font="$FONT" onAction="#processNumPad" />
-        <Button text="=" prefWidth="50" font="$FONT" onAction="#processNumPad" />
-        <Button text="+" prefWidth="50" font="$FONT" onAction="#processNumPad" />
+        <Button text="=" prefWidth="50" font="$FONT" onAction="#processOperator" />
+        <Button text="+" prefWidth="50" font="$FONT" onAction="#processOperator" />
     </HBox>
 
 
